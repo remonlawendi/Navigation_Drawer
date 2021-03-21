@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #6843d1;
+}
+.container {
+    position: relative;
+}
+.container .navigator {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    background: #fff;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.container .navigator.active{
+    width: 80px;
+}
+
+.container .navigator ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.container .navigator ul li {
+    position: relative;
+    list-style: none;
+    width: 100%;
+}
+.container .navigator ul li:hover {
+    background: #efefef;
+}
+.container .navigator ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #6843cf;
+    font-weight: 500;
+}
+.container .navigator ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 80px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+.container .navigator ul li a .icon .fa {
+    font-size: 24px;
+}
+.container .navigator ul li a .title {
+    position: relative;
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+.toggle {
+    position: absolute;
+    top: calc(50% - 20px);
+    right: -20px;
+    width: 40px;
+    height: 40px;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    border: 5px solid #6843cf;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.toggle::before {
+    content: '\f054';
+    font-family: fontAwesome;
+    position: absolute;
+    width: 33px;
+    line-height: 30px;
+    color: #6843cf;
+    text-align: center;
+    font-size: 16px;
+}
+.toggle.active::before {
+    content: '\f053';
+}
